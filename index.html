@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbers Land CUU - Reliz</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <div class="logo">
+            <span class="pole">💈</span> BARBERS LAND <span class="pole">💈</span>
+        </div>
+        <a href="#agendar" class="btn-gold-sm">Agendar Cita</a>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="rating-badge">
+                ★ 4.3 <span>(23 Opiniones en Google)</span>
+            </div>
+            <h1>BARBERS LAND</h1>
+            <p class="slogan">Donde tu imagen toma presencia</p>
+            <div class="hero-buttons">
+                <a href="#agendar" class="btn-primary">Reservar por WhatsApp</a>
+                <a href="#servicios" class="btn-secondary">Ver Servicios</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ubicación y Status -->
+    <section class="quick-info">
+        <div class="info-card">
+            <span class="icon">📍</span>
+            <div>
+                <h4>Ubicación Premium</h4>
+                <p>Av. Prol. Teófilo Borunda 11800, Reliz, Chihuahua, Chih.</p>
+            </div>
+        </div>
+        <div class="info-card">
+            <span class="icon">🕒</span>
+            <div>
+                <h4>Horarios de Atención</h4>
+                <p>Lun - Vie: 9:30 am - 8:00 pm<br>Sáb: 9:30 am - 6:00 pm | Dom: 10:00 am - 4:00 pm</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menú de Servicios -->
+    <section class="services" id="servicios">
+        <h2 class="section-title">NUESTROS SERVICIOS</h2>
+        <div class="gold-line"></div>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-info">
+                    <h3>Corte de Cabello</h3>
+                    <p>Asesoría de imagen, lavado y peinado con productos de alta gama.</p>
+                </div>
+                <div class="service-action">
+                    <button class="btn-select" onclick="reservarServicio('Corte de Cabello')">Agendar</button>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-info">
+                    <h3>Aritmética de Barba</h3>
+                    <p>Diseño, perfilado, toalla caliente y vaporozono relajante.</p>
+                </div>
+                <div class="service-action">
+                    <button class="btn-select" onclick="reservarServicio('Cuidado de Barba')">Agendar</button>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-info">
+                    <h3>Ritual Barbers Land</h3>
+                    <p>Experiencia completa: Corte + Barba + Exfoliante + Bebida de cortesía.</p>
+                </div>
+                <div class="service-action">
+                    <button class="btn-select" onclick="reservarServicio('Ritual Barbers Land')">Agendar</button>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-info">
+                    <h3>Facial & Exfoliante Mascarilla</h3>
+                    <p>Limpieza profunda de poros, mascarilla negra e hidratación.</p>
+                </div>
+                <div class="service-action">
+                    <button class="btn-select" onclick="reservarServicio('Facial y Exfoliante')">Agendar</button>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-info">
+                    <h3>Depilación con Cera Española</h3>
+                    <p>Perfilado perfecto de ceja, orejas o nariz con cera de baja fusión.</p>
+                </div>
+                <div class="service-action">
+                    <button class="btn-select" onclick="reservarServicio('Cera Española / Ceja')">Agendar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reseñas de Clientes Reales -->
+    <section class="reviews">
+        <h2 class="section-title">LO QUE DICEN DE NOSOTROS</h2>
+        <div class="gold-line"></div>
+
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>"Excelente servicio, a mi esposo e hijo les encantó el trato y el corte."</p>
+                <span>- Cliente en Google</span>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>"Nos hicieron sentir muy cómodos, el ambiente súper elegante e incluso nos ofrecieron algo de tomar."</p>
+                <span>- Cliente en Google</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Agendado Directo -->
+    <section class="booking" id="agendar">
+        <div class="booking-box">
+            <h2>AGENDA TU CITA AL INSTANTE</h2>
+            <p>Selecciona la fecha y te redirigiremos directamente al WhatsApp de la recepción.</p>
+            
+            <form id="bookingForm">
+                <div class="form-group">
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" placeholder="Ej. Emiliano Romero" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="servicio">Servicio deseado:</label>
+                    <select id="servicio" required>
+                        <option value="Corte de Cabello">Corte de Cabello</option>
+                        <option value="Cuidado de Barba">Barba / Perfilado</option>
+                        <option value="Ritual Barbers Land">Ritual Barbers Land (Corte + Barba + Facial)</option>
+                        <option value="Facial y Exfoliante">Facial & Exfoliante</option>
+                        <option value="Cera Española / Ceja">Cera Española / Ceja</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="fecha">Día preferido:</label>
+                    <input type="date" id="fecha" required>
+                </div>
+
+                <button type="submit" class="btn-primary-block">Enviar Cita por WhatsApp 📱</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Barbers Land CUU Reliz. Todos los derechos reservados.</p>
+        <p class="credit">Diseño por <a href="#" style="color:#d4af37; text-decoration:none;">Emiliano Romero</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
